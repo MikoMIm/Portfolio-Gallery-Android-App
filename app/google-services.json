@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407010538217",
+    "project_id": "esgalerry",
+    "storage_bucket": "esgalerry.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407010538217:android:40b74eb3c90648d2bbf678",
+        "android_client_info": {
+          "package_name": "com.company.esgallery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407010538217-9jt7um0dvnn69sbmp3tr4v49tee5sjah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCquD3cdSXg98qg7JNDq2_q6PzK3dIg2DE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407010538217-9jt7um0dvnn69sbmp3tr4v49tee5sjah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
