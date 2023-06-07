@@ -9,12 +9,13 @@ import android.widget.TextView
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.Button
-import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseApp
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.company.esgallery.classes.Animations
 
 
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var clickCaption: TextView

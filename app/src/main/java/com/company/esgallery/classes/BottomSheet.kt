@@ -15,11 +15,11 @@ class BottomSheet (private val context: Context) {
     }
 
     private val imageNameTextView: TextView by lazy {
-        bottomSheetView.findViewById<TextView>(R.id.imageNameTextView)
+        bottomSheetView.findViewById(R.id.imageNameTextView)
     }
 
     private val imageDescriptionTextView: TextView by lazy {
-        bottomSheetView.findViewById<TextView>(R.id.imageDescriptionTextView)
+        bottomSheetView.findViewById(R.id.imageDescriptionTextView)
     }
 
     private val bottomSheetDialog: BottomSheetDialog by lazy {
