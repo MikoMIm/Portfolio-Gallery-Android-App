@@ -9,7 +9,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.company.esgallery.R
 
 @SuppressLint("InflateParams")
-class BottomSheet (private val context: Context) {
+class BottomSheet(private val context: Context) {
     private val bottomSheetView: View by lazy {
         LayoutInflater.from(context).inflate(R.layout.bottom_sheet_layout, null)
     }
@@ -29,8 +29,12 @@ class BottomSheet (private val context: Context) {
     }
 
     fun show(imageName: String, imageDescription: String) {
+        updateContent(imageName, imageDescription)
+        bottomSheetDialog.show()
+    }
+
+    private fun updateContent(imageName: String, imageDescription: String) {
         imageNameTextView.text = imageName
         imageDescriptionTextView.text = imageDescription
-        bottomSheetDialog.show()
     }
 }

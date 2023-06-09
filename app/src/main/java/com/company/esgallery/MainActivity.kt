@@ -28,29 +28,18 @@ class MainActivity : AppCompatActivity() {
 
     private var isAnimationPlayed = false
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         FirebaseApp.initializeApp(this)
 
-        bContact = findViewById(R.id.bContact)
-        bGallery = findViewById(R.id.bGallery)
-        bBiography = findViewById(R.id.bBiography)
-        bBiography.setOnClickListener {
-            val intent = Intent(this, BiographyActivity::class.java)
-            startActivity(intent)
-        }
+        initializeViews()
+        setClickListeners()
+        setViewVisibility()
+        startAnimation()
+    }
 
-        bGallery.setOnClickListener {
-            val intent = Intent(this, GalleryActivity::class.java)
-            startActivity(intent)
-        }
-        bContact.setOnClickListener {
-            val intent = Intent(this, SendEmail::class.java)
-            startActivity(intent)
-        }
-
+    private fun initializeViews() {
         clickCaption = findViewById(R.id.clickCaption)
         textView1 = findViewById(R.id.textView)
         textView2 = findViewById(R.id.textView2)
@@ -58,12 +47,29 @@ class MainActivity : AppCompatActivity() {
         bGallery = findViewById(R.id.bGallery)
         bContact = findViewById(R.id.bContact)
         bBiography = findViewById(R.id.bBiography)
+    }
 
+    private fun setClickListeners() {
+        bBiography.setOnClickListener {
+            startActivity(Intent(this, BiographyActivity::class.java))
+        }
+
+        bGallery.setOnClickListener {
+            startActivity(Intent(this, GalleryActivity::class.java))
+        }
+
+        bContact.setOnClickListener {
+            startActivity(Intent(this, SendEmail::class.java))
+        }
+    }
+
+    private fun setViewVisibility() {
         bGallery.visibility = View.INVISIBLE
         bContact.visibility = View.INVISIBLE
         bBiography.visibility = View.INVISIBLE
+    }
 
-
+    private fun startAnimation() {
         val fadeInAnimation = AlphaAnimation(0f, 1f).apply {
             duration = 500
             repeatCount = Animation.INFINITE
@@ -78,7 +84,6 @@ class MainActivity : AppCompatActivity() {
                 Animations.moveTextViewUp(textView2)
                 Animations.moveTextViewUp(textView3)
                 Handler().postDelayed({
-
                     Animations.fadeInButton(bGallery)
                     Animations.fadeInButton(bContact)
                     Animations.fadeInButton(bBiography)
