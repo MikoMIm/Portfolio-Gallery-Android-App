@@ -25,7 +25,7 @@ class SendEmail : AppCompatActivity() {
     }
 
     private fun sendEmail() {
-        val recipient = "stabledif122@gmail.com"
+        val recipient = "esgallerytest@gmail.com"
         val subject = "Roger Fenton app"
         val message = editTextContent.text.toString()
 
