@@ -18,9 +18,6 @@
             android:name=".SendEmail"
             android:exported="false" />
         <activity
-            android:name=".AboutUs"
-            android:exported="false" />
-        <activity
             android:name=".GalleryActivity"
             android:exported="false" />
         <activity
