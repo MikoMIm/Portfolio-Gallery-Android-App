@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B1320"
+    android:background="#78543B"
     tools:context=".BiographyActivity">
 
     <ScrollView
@@ -20,11 +20,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView5"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
-                android:text="" />
+                android:layout_height="64dp" />
 
             <ImageView
                 android:id="@+id/imagePortrait"
@@ -32,13 +30,12 @@
                 android:layout_height="306dp"
                 tools:srcCompat="@tools:sample/avatars"
                 app:strokeColor="#FFFFFF"
-                app:strokeWidth="4dp"/>
+                app:strokeWidth="4dp"
+                android:importantForAccessibility="no" />
 
-            <TextView
-                android:id="@+id/textView7"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:text="" />
+                android:layout_height="12dp" />
 
             <TextView
                 android:id="@+id/textViewBio"
@@ -51,13 +48,11 @@
                 android:gravity="center"
                 android:text="Biography"
                 android:textColor="#ffffff"
-                android:textSize="36dp" />
+                android:textSize="36sp" />
 
-            <TextView
-                android:id="@+id/textView9"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:text="" />
+                android:layout_height="12dp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -70,31 +65,31 @@
                 android:paddingTop="20dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="20dp"
-                android:text="          Roger Fenton (1819-1869) was an English photographer widely recognized as one of the pioneers of documentary photography and one of the first war photographers. Born in Lancashire, England, Fenton initially pursued a career as a lawyer but eventually turned his attention to the emerging field of photography.\n\n
-         Fenton is best known for his groundbreaking work during the Crimean War in the 1850s. Commissioned by the British government, he captured images of the war, including portraits of soldiers, officers, and scenes of camp life. Fenton's photographs provided a rare and vivid visual documentation of the conflict, bringing the realities of war to the attention of the public back home.\n\n
-         His photographs from the Crimean War were remarkable for their composition and technical proficiency, considering the limitations of the equipment and the challenges of working in a war zone. Fenton often staged his images, arranging soldiers and equipment to create visually compelling scenes. This practice, common at the time due to the long exposure times required, sparked debates about the ethics of manipulating reality in documentary photography.\n\n
-         After the war, Fenton shifted his focus back to architectural and landscape photography, capturing images of notable structures and scenic vistas in Britain. He also documented the royal family, including Queen Victoria and Prince Albert.\n\n"
+                android:text="@string/Biography"
                 android:textColor="#ffffff"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="323dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:backgroundTint="#0B1320"
+                android:background="@drawable/button_outline"
+                android:textColor="@color/white"
                 android:gravity="center"
                 android:paddingStart="20dp"
                 android:text="Full article on Wikipedia"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
-            <TextView
-                android:id="@+id/textView10"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="" />
+                android:layout_height="60dp" />
 
 
         </LinearLayout>

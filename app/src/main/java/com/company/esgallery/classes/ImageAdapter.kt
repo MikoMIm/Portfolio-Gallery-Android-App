@@ -6,6 +6,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 
+
 class ImageAdapter(
     private val context: Context,
     private val imageInfoList: List<ImageInfo>,
@@ -37,6 +38,7 @@ class ImageAdapter(
 
     private fun loadImage(imageView: ImageView, imageIndex: String) {
         loader.loadImage(imageView, imageIndex)
+
     }
 
     private fun setItemClick(holder: ImageViewHolder, imageInfo: ImageInfo) {

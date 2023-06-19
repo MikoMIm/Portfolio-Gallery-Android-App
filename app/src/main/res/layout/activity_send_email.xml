@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/box"
+    android:background="#78543B"
     tools:context=".SendEmail">
 
     <EditText
@@ -34,9 +34,9 @@
         android:fontFamily="@font/genbasi"
         android:gravity="center"
         android:background="@drawable/stroke_image"
-        android:text="If you have any questions or suggestions you can leave them here"
+        android:text="@string/Contact_Us_Info"
         android:textColor="#ffffff"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,9 +47,10 @@
         android:id="@+id/buttonSend"
         android:layout_width="183dp"
         android:layout_height="61dp"
-        android:backgroundTint="#1C3F60"
         android:text="Send"
-        android:textSize="20sp"
+        android:background="@drawable/button_outline"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.565"

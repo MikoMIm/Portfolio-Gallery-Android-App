@@ -6,14 +6,13 @@ import android.net.NetworkCapabilities
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.firebase.FirebaseApp
 import com.company.esgallery.classes.Animations
+import com.google.firebase.FirebaseApp
+
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -77,31 +76,31 @@ class MainActivity : AppCompatActivity() {
             bBiography.visibility = View.INVISIBLE
         }
 
-        private fun startAnimation() {
-            val fadeInAnimation = AlphaAnimation(0f, 1f).apply {
-                duration = 500
-                repeatCount = Animation.INFINITE
-                repeatMode = Animation.REVERSE
-            }
-            clickCaption.startAnimation(fadeInAnimation)
+    private fun startAnimation() {
+        val rootLayout = findViewById<ConstraintLayout>(R.id.constraintLayout)
+        val textView1 = findViewById<TextView>(R.id.textView)
+        val textView2 = findViewById<TextView>(R.id.textView2)
+        val textView3 = findViewById<TextView>(R.id.textView3)
+        val bGallery = findViewById<Button>(R.id.bGallery)
+        val bContact = findViewById<Button>(R.id.bContact)
+        val bBiography = findViewById<Button>(R.id.bBiography)
+        val clickCaption = findViewById<TextView>(R.id.clickCaption)
 
-            val rootLayout = findViewById<ConstraintLayout>(R.id.constraintLayout)
-            rootLayout.setOnClickListener {
-                if (!isAnimationPlayed) {
-                    Animations.moveTextViewUp(textView1)
-                    Animations.moveTextViewUp(textView2)
-                    Animations.moveTextViewUp(textView3)
-                    Handler().postDelayed({
-                        Animations.fadeInButton(bGallery)
-                        Animations.fadeInButton(bContact)
-                        Animations.fadeInButton(bBiography)
-                    }, 500)
-                    Animations.fadeOutTextView(clickCaption)
-
-                    isAnimationPlayed = true
-                }
+        rootLayout.setOnClickListener {
+            if (!isAnimationPlayed) {
+                Animations.moveTextViewUp(textView1)
+                Animations.moveTextViewUp(textView2)
+                Animations.moveTextViewUp(textView3)
+                Handler().postDelayed({
+                    Animations.fadeInButton(bGallery)
+                    Animations.fadeInButton(bContact)
+                    Animations.fadeInButton(bBiography)
+                }, 500)
+                Animations.fadeOutTextView(clickCaption)
+                isAnimationPlayed = true
             }
         }
+    }
 
     private fun isConnectedToInternet(): Boolean {
         val connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager

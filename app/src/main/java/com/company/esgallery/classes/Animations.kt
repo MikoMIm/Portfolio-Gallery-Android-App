@@ -30,5 +30,3 @@ object Animations {
         view.startAnimation(animation)
     }
 }
-
-
