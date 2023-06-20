@@ -15,8 +15,13 @@ object Animations {
     }
 
     fun fadeOutTextView(textView: TextView) {
-        animateView(textView, AlphaAnimation(1f, 0f))
-        textView.visibility = View.GONE
+        val fadeIn = AlphaAnimation(0f, 1f).apply {
+            duration = 500
+            repeatCount = Animation.INFINITE
+            repeatMode = Animation.REVERSE
+        }
+
+        textView.startAnimation(fadeIn)
     }
 
     fun fadeInButton(button: Button) {

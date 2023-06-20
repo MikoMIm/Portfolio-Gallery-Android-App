@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.company.esgallery.classes.Animations
+import com.company.esgallery.classes.Animations.fadeOutTextView
 import com.google.firebase.FirebaseApp
 
 
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             bGallery = findViewById(R.id.bGallery)
             bContact = findViewById(R.id.bContact)
             bBiography = findViewById(R.id.bBiography)
+
+
         }
 
         private fun setClickListeners() {
@@ -85,6 +88,8 @@ class MainActivity : AppCompatActivity() {
         val bContact = findViewById<Button>(R.id.bContact)
         val bBiography = findViewById<Button>(R.id.bBiography)
         val clickCaption = findViewById<TextView>(R.id.clickCaption)
+        fadeOutTextView(clickCaption)
+
 
         rootLayout.setOnClickListener {
             if (!isAnimationPlayed) {
@@ -96,7 +101,6 @@ class MainActivity : AppCompatActivity() {
                     Animations.fadeInButton(bContact)
                     Animations.fadeInButton(bBiography)
                 }, 500)
-                Animations.fadeOutTextView(clickCaption)
                 isAnimationPlayed = true
             }
         }
