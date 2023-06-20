@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#78543B"
+    android:background="#FF976A4B"
     android:padding="16dp">
 
     <ImageView
