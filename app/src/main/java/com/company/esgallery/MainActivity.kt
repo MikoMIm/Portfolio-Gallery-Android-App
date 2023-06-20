@@ -91,8 +91,10 @@ class MainActivity : AppCompatActivity() {
         fadeOutTextView(clickCaption)
 
 
+
         rootLayout.setOnClickListener {
             if (!isAnimationPlayed) {
+                clickCaption.visibility = View.GONE
                 Animations.moveTextViewUp(textView1)
                 Animations.moveTextViewUp(textView2)
                 Animations.moveTextViewUp(textView3)
